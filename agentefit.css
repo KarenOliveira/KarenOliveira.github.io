@@ -209,13 +209,13 @@ body {
   line-height: 1.2;
 }
 
-.hero-title .highlight {
+.highlight {
   color: var(--secondary-color);
   position: relative;
   font-weight: 800;
 }
 
-.hero-title .highlight::after {
+.highlight::after {
   content: '';
   position: absolute;
   bottom: -5px;
@@ -564,6 +564,18 @@ section {
   color: white;
 }
 
+.trainer-photo {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: var(--shadow-xl);
+  border: 4px solid transparent;
+  background: var(--gradient-secondary);
+  background-clip: padding-box;
+}
+
 /* Contact Section */
 .contact {
   background: var(--bg-white);
@@ -815,6 +827,11 @@ section {
   
   .image-placeholder i {
     font-size: 6rem;
+  }
+  
+  .trainer-photo {
+    width: 250px;
+    height: 250px;
   }
   
   .logo-icon {
