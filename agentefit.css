@@ -16,6 +16,7 @@
   --secondary-color: #4ECDC4;      /* Turquesa */
   --accent-color: #F39C12;         /* Amarelo mais escuro */
   --turquoise-dark: #48C9B0;       /* Turquesa escuro */
+  --black-color: #000000;
   
   /* Cores complementares */
   --bg-white: #FFFFFF;
@@ -82,7 +83,7 @@ body {
 
 /* Header */
 .header {
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--black-color);
   backdrop-filter: blur(10px);
   position: fixed;
   top: 0;
@@ -112,9 +113,16 @@ body {
   text-decoration: none;
 }
 
-.logo i {
-  color: var(--secondary-color);
-  font-size: 2rem;
+.logo-icon {
+  height: 2.5rem;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-text {
+  height: 2rem;
+  width: auto;
+  object-fit: contain;
 }
 
 .nav-menu {
@@ -167,7 +175,7 @@ body {
 
 /* Hero Section */
 .hero {
-  background: var(--gradient-hero);
+  background: var(--black-color);
   padding: 120px 0 80px;
   color: white;
   position: relative;
@@ -593,7 +601,7 @@ section {
 
 /* Footer */
 .footer {
-  background: var(--text-dark);
+  background: var(--black-color);
   color: white;
   padding: 3rem 0 1rem;
 }
@@ -740,6 +748,14 @@ section {
   section {
     padding: 60px 0;
   }
+  
+  .logo-icon {
+    height: 2rem;
+  }
+  
+  .logo-text {
+    height: 1.5rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -768,6 +784,14 @@ section {
   
   .image-placeholder i {
     font-size: 6rem;
+  }
+  
+  .logo-icon {
+    height: 1.8rem;
+  }
+  
+  .logo-text {
+    height: 1.3rem;
   }
 }
 
