@@ -565,8 +565,8 @@ section {
 }
 
 .trainer-photo {
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
@@ -830,8 +830,8 @@ section {
   }
   
   .trainer-photo {
-    width: 250px;
-    height: 250px;
+    width: 280px;
+    height: 280px;
   }
   
   .logo-icon {
