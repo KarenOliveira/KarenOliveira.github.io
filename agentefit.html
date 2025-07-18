@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AGenteFit - Academia com Amor | Luciana Cavalcanti</title>
-    <meta name="description" content="AgenteRit - A academia gerenciada com muito amor pela Luciana Cavacante. Transforme seu corpo e mente conosco!">
+    <meta name="description"
+        content="AgenteRit - A academia gerenciada com muito amor pela Luciana Cavacante. Transforme seu corpo e mente conosco!">
     <link rel="stylesheet" href="agentefit.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
     <!-- Skip Link para acessibilidade -->
     <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
@@ -49,7 +54,7 @@
                         Transforme seu corpo, <span class="highlight">transforme sua vida</span>
                     </h1>
                     <p class="hero-subtitle">
-                        Uma academia gerenciada com muito amor pela Luciana Cavalcanti. 
+                        Uma academia gerenciada com muito amor pela Luciana Cavalcanti.
                         Aqui você encontra o apoio que precisa para alcançar seus objetivos.
                     </p>
                     <div class="hero-buttons">
@@ -87,49 +92,56 @@
                             <i class="fas fa-medal"></i>
                         </div>
                         <h3>Variedade de Aulas</h3>
-                        <p>Oferecemos uma variedade de aulas e programas de treinamento, permitindo aos participantes experimentar diferentes modalidades de exercícios.</p>
+                        <p>Oferecemos uma variedade de aulas e programas de treinamento, permitindo aos participantes
+                            experimentar diferentes modalidades de exercícios.</p>
                     </div>
                     <div class="about-card">
                         <div class="card-icon">
                             <i class="fas fa-users"></i>
                         </div>
                         <h3>Motivação em Grupo</h3>
-                        <p>O ambiente de grupo pode fornecer motivação adicional, tornando o treinamento mais divertido e desafiador.</p>
+                        <p>O ambiente de grupo pode fornecer motivação adicional, tornando o treinamento mais divertido
+                            e desafiador.</p>
                     </div>
                     <div class="about-card">
                         <div class="card-icon">
                             <i class="fas fa-clipboard-check"></i>
                         </div>
                         <h3>Equipamentos Específicos</h3>
-                        <p>No Estúdio possuímos equipamentos especializados que podem não estar disponíveis em uma academia tradicional, proporcionando novas opções de treinamento.</p>
+                        <p>No Estúdio possuímos equipamentos especializados que podem não estar disponíveis em uma
+                            academia tradicional, proporcionando novas opções de treinamento.</p>
                     </div>
                     <div class="about-card">
                         <div class="card-icon">
                             <i class="fas fa-handshake"></i>
                         </div>
                         <h3>Comunidade Fitness</h3>
-                        <p>Estabelecemos uma comunidade de pessoas com interesses semelhantes, criando um senso de pertencimento e apoio mútuo.</p>
+                        <p>Estabelecemos uma comunidade de pessoas com interesses semelhantes, criando um senso de
+                            pertencimento e apoio mútuo.</p>
                     </div>
                     <div class="about-card">
                         <div class="card-icon">
                             <i class="fas fa-bullseye"></i>
                         </div>
                         <h3>Foco em Objetivos Específicos</h3>
-                        <p>Somos especializados em objetivos específicos, como perda de peso, flexibilidade ou treinamento de força, adaptando-se às necessidades individuais.</p>
+                        <p>Somos especializados em objetivos específicos, como perda de peso, flexibilidade ou
+                            treinamento de força, adaptando-se às necessidades individuais.</p>
                     </div>
                     <div class="about-card">
                         <div class="card-icon">
                             <i class="fas fa-face-smile-beam"></i>
                         </div>
                         <h3>Ambiente Controlado</h3>
-                        <p>Oferecemos um ambiente controlado, com música e iluminação adequadas, criando uma atmosfera favorável ao treinamento.</p>
+                        <p>Oferecemos um ambiente controlado, com música e iluminação adequadas, criando uma atmosfera
+                            favorável ao treinamento.</p>
                     </div>
                     <div class="about-card">
                         <div class="card-icon">
                             <i class="fas fa-fingerprint"></i>
                         </div>
                         <h3>Acompanhamento Personalizado</h3>
-                        <p>Proporcionamos um acompanhamento personalizado, ajustando os treinos conforme o progresso de cada indivíduo.</p>
+                        <p>Proporcionamos um acompanhamento personalizado, ajustando os treinos conforme o progresso de
+                            cada indivíduo.</p>
                     </div>
                     <!-- <div class="about-card">
                         <div class="card-icon">
@@ -157,41 +169,78 @@
                     <p>Descubra a atividade perfeita para você</p>
                 </div>
                 <div class="services-grid">
-                    <div class="service-card">
+                    <div class="service-card expandable-card" id="musculacao-card"
+                        onclick="toggleCard('musculacao-card')" title="Clique para ver mais detalhes">
                         <div class="service-icon">
                             <i class="fas fa-dumbbell"></i>
                         </div>
-                        <h3>Musculação</h3>
-                        <p>Treinos personalizados para ganho de massa muscular e definição corporal.</p>
-                        <ul>
-                            <li>Avaliação física completa</li>
-                            <li>Treinos individualizados</li>
-                            <li>Acompanhamento constante</li>
-                        </ul>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-running"></i>
+                        <div class="card-header">
+                            <h3>Musculação</h3>
+                            <i class="fas fa-chevron-down expand-icon"></i>
                         </div>
-                        <h3>Cardio</h3>
-                        <p>Exercícios aeróbicos para melhorar o condicionamento e queimar calorias.</p>
-                        <ul>
-                            <li>Esteira e bicicleta</li>
-                            <li>Circuitos funcionais</li>
-                            <li>Treinos intervalados</li>
-                        </ul>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-leaf"></i>
+                        <div class="card-content">
+                            <p class="basic-content">Treinos personalizados para ganho de massa muscular e definição
+                                corporal.</p>
+                            <ul class="basic-content">
+                                <li>Peso Livre</li>
+                                <li>Halteres</li>
+                                <li>Barras</li>
+                                <li>Anilhas</li>
+                            </ul>
+
+                            <div class="expand-hint">
+                                <span class="expand-text">Clique em qualquer lugar para ver mais detalhes</span>
+                            </div>
+
+                            <div class="expanded-content">
+                                <div class="detailed-info">
+                                    <h4>💪 Detalhes:</h4>
+                                    <p>A musculação é uma forma de exercício que utiliza resistência, como pesos livres,
+                                        máquinas ou o próprio peso corporal, para fortalecer e desenvolver os músculos.
+                                        O treinamento de musculação é projetado para promover o crescimento muscular,
+                                        melhorar a força, resistência e definição muscular. É uma prática comum em
+                                        academias e pode ser adaptada para diferentes objetivos, como ganho de massa
+                                        muscular, perda de peso ou condicionamento físico geral.</p>
+                                    <div class="cta-section">
+                                        <p><strong>Pronto para começar sua transformação?</strong></p>
+                                        <a href="#contact" class="btn btn-primary btn-small">Agendar Avaliação</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <h3>Funcional</h3>
-                        <p>Exercícios que trabalham o corpo de forma integrada e natural.</p>
-                        <ul>
-                            <li>Movimentos naturais</li>
-                            <li>Melhora da flexibilidade</li>
-                            <li>Fortalecimento do core</li>
-                        </ul>
+                    </div>
+                    <div class="service-card expandable-card" id="pilates-card"
+                        onclick="toggleCard('pilates-card')" title="Clique para ver mais detalhes">
+                        <div class="service-icon">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <div class="card-header">
+                            <h3>Pilates</h3>
+                            <i class="fas fa-chevron-down expand-icon"></i>
+                        </div>
+                        <div class="card-content">
+                            <p class="basic-content">Pilates em aparelhos. Tendo as seguintes opções:</p>
+                            <ul class="basic-content">
+                                <li>Chair</li>
+                                <li>Cadillac</li>
+                                <li>Carrinho</li>
+                            </ul>
+
+                            <div class="expand-hint">
+                                <span class="expand-text">Clique em qualquer lugar para ver mais detalhes</span>
+                            </div>
+
+                            <div class="expanded-content">
+                                <div class="detailed-info">
+                                    <h4>💪 Detalhes:</h4>
+                                    <p>O Pilates é um método de exercício físico que visa fortalecer o corpo, melhorar a flexibilidade e promover o equilíbrio e a coordenação. Foi desenvolvido por Joseph Pilates e inclui uma variedade de exercícios realizados com controle preciso, focando na respiração e na concentração.</p>
+                                    <div class="cta-section">
+                                        <p><strong>Pronto para começar sua transformação?</strong></p>
+                                        <a href="#contact" class="btn btn-primary btn-small">Agendar Avaliação</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -208,7 +257,8 @@
                         </div>
                         <div class="trainer-description">
                             <p>
-                                Com anos de experiência no ramo fitness, Luciana criou a AGenteFit com o propósito de oferecer um atendimento diferenciado e humanizado. 
+                                Com anos de experiência no ramo fitness, Luciana criou a AGenteFit com o propósito de
+                                oferecer um atendimento diferenciado e humanizado.
                                 Sua paixão pelo que faz é contagiante e reflete em cada treino.
                             </p>
                             <div class="trainer-qualities">
@@ -228,7 +278,8 @@
                         </div>
                     </div>
                     <div class="trainer-image">
-                        <img src="luciana.jpg" alt="Luciana Cavalcanti - Fundadora ePersonal Trainer da AGenteFit" class="trainer-photo">
+                        <img src="luciana.jpg" alt="Luciana Cavalcanti - Fundadora ePersonal Trainer da AGenteFit"
+                            class="trainer-photo">
                     </div>
                 </div>
             </div>
@@ -308,7 +359,8 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 AGenteFit. Todos os direitos reservados. Feito com <i class="fas fa-heart"></i> por Karen Oliveira</p>
+                <p>&copy; 2025 AGenteFit. Todos os direitos reservados. Feito com <i class="fas fa-heart"></i> por Karen
+                    Oliveira</p>
             </div>
         </div>
     </footer>
@@ -337,6 +389,55 @@
             });
         });
 
+        // Expandable Card Functionality
+        function toggleCard(cardId) {
+            const card = document.getElementById(cardId);
+            const expandIcon = card.querySelector('.expand-icon');
+            const expandedContent = card.querySelector('.expanded-content');
+
+            const isExpanded = expandedContent.style.display === 'block';
+
+            if (isExpanded) {
+                // Fechar o card
+                expandedContent.style.display = 'none';
+                expandIcon.classList.remove('fa-chevron-up');
+                expandIcon.classList.add('fa-chevron-down');
+                card.classList.remove('expanded');
+                card.title = 'Clique para ver mais detalhes';
+
+                // Scroll suave para o topo do card quando fechar
+                card.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                    inline: 'nearest'
+                });
+            } else {
+                // Abrir o card
+                expandedContent.style.display = 'block';
+                expandIcon.classList.remove('fa-chevron-down');
+                expandIcon.classList.add('fa-chevron-up');
+                card.classList.add('expanded');
+                card.title = 'Clique para recolher';
+
+                // Pequeno delay para garantir que o conteúdo seja renderizado antes do scroll
+                setTimeout(() => {
+                    card.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start',
+                        inline: 'nearest'
+                    });
+                }, 100);
+            }
+        }
+
+        // Inicializar o estado do card ao carregar a página
+        document.addEventListener('DOMContentLoaded', function () {
+            const expandedContent = document.querySelector('.expanded-content');
+            if (expandedContent) {
+                expandedContent.style.display = 'none';
+            }
+        });
     </script>
 </body>
-</html> 
+
+</html>
