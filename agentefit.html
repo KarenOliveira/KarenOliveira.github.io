@@ -169,76 +169,164 @@
                     <p>Descubra a atividade perfeita para você</p>
                 </div>
                 <div class="services-grid">
-                    <div class="service-card expandable-card" id="musculacao-card"
-                        onclick="toggleCard('musculacao-card')" title="Clique para ver mais detalhes">
+                    <div class="service-card" id="musculacao-card" onclick="toggleService('musculacao')" title="Clique para ver mais detalhes">
                         <div class="service-icon">
                             <i class="fas fa-dumbbell"></i>
                         </div>
-                        <div class="card-header">
-                            <h3>Musculação</h3>
-                            <i class="fas fa-chevron-down expand-icon"></i>
+                        <h3>Musculação</h3>
+                        <p>Treinos personalizados para ganho de massa muscular e definição corporal.</p>
+                        <ul>
+                            <li>Peso Livre</li>
+                            <li>Halteres</li>
+                            <li>Barras</li>
+                            <li>Anilhas</li>
+                            <li>Acessórios</li>
+                        </ul>
+                        <div class="service-hint">
+                            <span>Clique para ver mais detalhes</span>
                         </div>
-                        <div class="card-content">
-                            <p class="basic-content">Treinos personalizados para ganho de massa muscular e definição
-                                corporal.</p>
-                            <ul class="basic-content">
-                                <li>Peso Livre</li>
-                                <li>Halteres</li>
-                                <li>Barras</li>
-                                <li>Anilhas</li>
+                    </div>
+                    <div class="service-card" id="pilates-card" onclick="toggleService('pilates')" title="Clique para ver mais detalhes">
+                        <div class="service-icon">
+                            <i class="fas fa-spa"></i>
+                        </div>
+                        <h3>Pilates</h3>
+                        <p>Pilates em aparelhos. Tendo as seguintes opções:</p>
+                        <ul>
+                            <li>Chair</li>
+                            <li>Cadillac</li>
+                            <li>Carrinho</li>
+                        </ul>
+                        <div class="service-hint">
+                            <span>Clique para ver mais detalhes</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Details Area -->
+                <div class="service-details-area" id="service-details">
+                    <div class="service-details" id="musculacao-details">
+                        <div class="detailed-info">
+                            <h4>💪 O que você vai encontrar:</h4>
+                            <p>Nossa musculação é muito mais que apenas levantar pesos. É um programa completo pensado para transformar seu corpo de forma segura e eficiente, sempre com o acompanhamento personalizado da Luciana.</p>
+                            
+                            <h4>🎯 Benefícios da Musculação:</h4>
+                            <ul class="benefits-list">
+                                <li><strong>Aumento da massa muscular:</strong> Desenvolvimento muscular progressivo e consistente</li>
+                                <li><strong>Melhora da força:</strong> Ganho de força funcional para o dia a dia</li>
+                                <li><strong>Definição corporal:</strong> Redução de gordura e melhora do tônus muscular</li>
+                                <li><strong>Fortalecimento ósseo:</strong> Prevenção de osteoporose e lesões</li>
+                                <li><strong>Melhora da postura:</strong> Correção de desequilíbrios musculares</li>
+                                <li><strong>Aceleração do metabolismo:</strong> Queima mais calorias mesmo em repouso</li>
                             </ul>
-
-                            <div class="expand-hint">
-                                <span class="expand-text">Clique em qualquer lugar para ver mais detalhes</span>
-                            </div>
-
-                            <div class="expanded-content">
-                                <div class="detailed-info">
-                                    <h4>💪 Detalhes:</h4>
-                                    <p>A musculação é uma forma de exercício que utiliza resistência, como pesos livres,
-                                        máquinas ou o próprio peso corporal, para fortalecer e desenvolver os músculos.
-                                        O treinamento de musculação é projetado para promover o crescimento muscular,
-                                        melhorar a força, resistência e definição muscular. É uma prática comum em
-                                        academias e pode ser adaptada para diferentes objetivos, como ganho de massa
-                                        muscular, perda de peso ou condicionamento físico geral.</p>
-                                    <div class="cta-section">
-                                        <p><strong>Pronto para começar sua transformação?</strong></p>
-                                        <a href="#contact" class="btn btn-primary btn-small">Agendar Avaliação</a>
+                            
+                            <h4>🏋️‍♀️ Nossa Metodologia:</h4>
+                            <div class="methodology-grid">
+                                <div class="method-item">
+                                    <i class="fas fa-clipboard-check"></i>
+                                    <div>
+                                        <h5>Avaliação Completa</h5>
+                                        <p>Análise postural, composição corporal e objetivos pessoais</p>
                                     </div>
                                 </div>
+                                <div class="method-item">
+                                    <i class="fas fa-chart-line"></i>
+                                    <div>
+                                        <h5>Planejamento Individualizado</h5>
+                                        <p>Treinos específicos para seu nível e metas</p>
+                                    </div>
+                                </div>
+                                <div class="method-item">
+                                    <i class="fas fa-eye"></i>
+                                    <div>
+                                        <h5>Supervisão Constante</h5>
+                                        <p>Acompanhamento da execução e progressão</p>
+                                    </div>
+                                </div>
+                                <div class="method-item">
+                                    <i class="fas fa-sync-alt"></i>
+                                    <div>
+                                        <h5>Ajustes Regulares</h5>
+                                        <p>Evolução do treino conforme seu progresso</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h4>⚡ Diferenciais AGenteFit:</h4>
+                            <div class="highlights-grid">
+                                <div class="highlight-item">
+                                    <span class="highlight-number">01</span>
+                                    <div>
+                                        <h5>Ambiente Acolhedor</h5>
+                                        <p>Espaço intimista onde você se sente à vontade para evoluir</p>
+                                    </div>
+                                </div>
+                                <div class="highlight-item">
+                                    <span class="highlight-number">02</span>
+                                    <div>
+                                        <h5>Atenção Personalizada</h5>
+                                        <p>Cada aluno recebe o tempo e cuidado que merece</p>
+                                    </div>
+                                </div>
+                                <div class="highlight-item">
+                                    <span class="highlight-number">03</span>
+                                    <div>
+                                        <h5>Equipamentos de Qualidade</h5>
+                                        <p>Sempre bem conservados e adequados para cada exercício</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-section">
+                                <p><strong>Pronto para começar sua transformação?</strong></p>
+                                <a href="#contact" class="btn btn-primary btn-small">Agendar Avaliação</a>
                             </div>
                         </div>
                     </div>
-                    <div class="service-card expandable-card" id="pilates-card"
-                        onclick="toggleCard('pilates-card')" title="Clique para ver mais detalhes">
-                        <div class="service-icon">
-                            <i class="fas fa-dumbbell"></i>
-                        </div>
-                        <div class="card-header">
-                            <h3>Pilates</h3>
-                            <i class="fas fa-chevron-down expand-icon"></i>
-                        </div>
-                        <div class="card-content">
-                            <p class="basic-content">Pilates em aparelhos. Tendo as seguintes opções:</p>
-                            <ul class="basic-content">
-                                <li>Chair</li>
-                                <li>Cadillac</li>
-                                <li>Carrinho</li>
+                    
+                    <div class="service-details" id="pilates-details">
+                        <div class="detailed-info">
+                            <h4>🧘‍♀️ O que é o Pilates:</h4>
+                            <p>O Pilates é um método de exercício físico que visa fortalecer o corpo, melhorar a flexibilidade e promover o equilíbrio e a coordenação. Foi desenvolvido por Joseph Pilates e inclui uma variedade de exercícios realizados com controle preciso, focando na respiração e na concentração.</p>
+                            
+                            <h4>🎯 Benefícios do Pilates:</h4>
+                            <ul class="benefits-list">
+                                <li><strong>Fortalecimento do Core:</strong> Desenvolvimento dos músculos abdominais e da região lombar</li>
+                                <li><strong>Melhora da Postura:</strong> Correção de desalinhamentos e fortalecimento da coluna</li>
+                                <li><strong>Aumento da Flexibilidade:</strong> Alongamento e elasticidade muscular</li>
+                                <li><strong>Equilíbrio e Coordenação:</strong> Melhora da consciência corporal</li>
+                                <li><strong>Redução de Dores:</strong> Alívio de tensões e dores nas costas</li>
+                                <li><strong>Bem-estar Mental:</strong> Redução do estresse e melhora da concentração</li>
                             </ul>
-
-                            <div class="expand-hint">
-                                <span class="expand-text">Clique em qualquer lugar para ver mais detalhes</span>
-                            </div>
-
-                            <div class="expanded-content">
-                                <div class="detailed-info">
-                                    <h4>💪 Detalhes:</h4>
-                                    <p>O Pilates é um método de exercício físico que visa fortalecer o corpo, melhorar a flexibilidade e promover o equilíbrio e a coordenação. Foi desenvolvido por Joseph Pilates e inclui uma variedade de exercícios realizados com controle preciso, focando na respiração e na concentração.</p>
-                                    <div class="cta-section">
-                                        <p><strong>Pronto para começar sua transformação?</strong></p>
-                                        <a href="#contact" class="btn btn-primary btn-small">Agendar Avaliação</a>
+                            
+                            <h4>🏋️‍♀️ Nossos Aparelhos:</h4>
+                            <div class="methodology-grid">
+                                <div class="method-item">
+                                    <i class="fas fa-chair"></i>
+                                    <div>
+                                        <h5>Chair</h5>
+                                        <p>Exercícios específicos para fortalecimento e alongamento</p>
                                     </div>
                                 </div>
+                                <div class="method-item">
+                                    <i class="fas fa-bed"></i>
+                                    <div>
+                                        <h5>Cadillac</h5>
+                                        <p>Movimentos precisos com molas e barras</p>
+                                    </div>
+                                </div>
+                                <div class="method-item">
+                                    <i class="fas fa-dumbbell"></i>
+                                    <div>
+                                        <h5>Carrinho</h5>
+                                        <p>Exercícios dinâmicos e funcionais</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-section">
+                                <p><strong>Pronto para experimentar o Pilates?</strong></p>
+                                <a href="#contact" class="btn btn-primary btn-small">Agendar Aula Experimental</a>
                             </div>
                         </div>
                     </div>
@@ -389,39 +477,39 @@
             });
         });
 
-        // Expandable Card Functionality
-        function toggleCard(cardId) {
-            const card = document.getElementById(cardId);
-            const expandIcon = card.querySelector('.expand-icon');
-            const expandedContent = card.querySelector('.expanded-content');
+        // Service Toggle Functionality
+        function toggleService(serviceName) {
+            const detailsArea = document.getElementById('service-details');
+            const allDetails = detailsArea.querySelectorAll('.service-details');
+            const targetDetails = document.getElementById(serviceName + '-details');
+            const allCards = document.querySelectorAll('.service-card');
+            const targetCard = document.getElementById(serviceName + '-card');
 
-            const isExpanded = expandedContent.style.display === 'block';
+            // Remove active class from all cards
+            allCards.forEach(card => {
+                card.classList.remove('active');
+            });
 
-            if (isExpanded) {
-                // Fechar o card
-                expandedContent.style.display = 'none';
-                expandIcon.classList.remove('fa-chevron-up');
-                expandIcon.classList.add('fa-chevron-down');
-                card.classList.remove('expanded');
-                card.title = 'Clique para ver mais detalhes';
+            // Hide all details
+            allDetails.forEach(detail => {
+                detail.style.display = 'none';
+            });
 
-                // Scroll suave para o topo do card quando fechar
-                card.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start',
-                    inline: 'nearest'
-                });
+            // Check if the same service is already active
+            if (targetDetails.style.display === 'block') {
+                // Close the details
+                targetDetails.style.display = 'none';
+                detailsArea.style.display = 'none';
+                targetCard.classList.remove('active');
             } else {
-                // Abrir o card
-                expandedContent.style.display = 'block';
-                expandIcon.classList.remove('fa-chevron-down');
-                expandIcon.classList.add('fa-chevron-up');
-                card.classList.add('expanded');
-                card.title = 'Clique para recolher';
+                // Show the selected service details
+                targetDetails.style.display = 'block';
+                detailsArea.style.display = 'block';
+                targetCard.classList.add('active');
 
-                // Pequeno delay para garantir que o conteúdo seja renderizado antes do scroll
+                // Smooth scroll to details area
                 setTimeout(() => {
-                    card.scrollIntoView({
+                    detailsArea.scrollIntoView({
                         behavior: 'smooth',
                         block: 'start',
                         inline: 'nearest'
@@ -430,12 +518,16 @@
             }
         }
 
-        // Inicializar o estado do card ao carregar a página
+        // Initialize service details on page load
         document.addEventListener('DOMContentLoaded', function () {
-            const expandedContent = document.querySelector('.expanded-content');
-            if (expandedContent) {
-                expandedContent.style.display = 'none';
-            }
+            const detailsArea = document.getElementById('service-details');
+            const allDetails = detailsArea.querySelectorAll('.service-details');
+            
+            // Hide all details initially
+            allDetails.forEach(detail => {
+                detail.style.display = 'none';
+            });
+            detailsArea.style.display = 'none';
         });
     </script>
 </body>
