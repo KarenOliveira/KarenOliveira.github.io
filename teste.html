@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modalidades da Academia</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+      margin: 0;
+    }
+    .menu {
+      width: 30%;
+      background: #f0f0f0;
+      padding: 1rem;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    }
+    .menu button {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 0.5rem;
+      border: none;
+      background: #fff;
+      cursor: pointer;
+      text-align: left;
+      transition: background 0.3s;
+    }
+    .menu button:hover {
+      background: #e0e0e0;
+    }
+    .detalhes {
+      flex: 1;
+      padding: 2rem;
+    }
+    .detalhes h2 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <button onclick="mostrarDetalhes('pilates')">Pilates</button>
+    <button onclick="mostrarDetalhes('musculacao')">Musculação</button>
+    <button onclick="mostrarDetalhes('yoga')">Yoga</button>
+  </div>
+  <div class="detalhes" id="detalhes">
+    <h2>Escolha uma modalidade</h2>
+    <p>Veja os detalhes à direita ao clicar em uma das opções.</p>
+  </div>
+
+  <script>
+    const dados = {
+      pilates: {
+        titulo: 'Pilates',
+        texto: 'O Pilates melhora a postura, fortalece os músculos e promove maior consciência corporal.'
+      },
+      musculacao: {
+        titulo: 'Musculação',
+        texto: 'Treinamento com pesos para ganho de massa muscular, força e resistência.'
+      },
+      yoga: {
+        titulo: 'Yoga',
+        texto: 'Prática milenar que une corpo e mente, com foco em respiração, flexibilidade e meditação.'
+      }
+    };
+
+    function mostrarDetalhes(modalidade) {
+      const info = dados[modalidade];
+      const container = document.getElementById('detalhes');
+      container.innerHTML = `<h2>${info.titulo}</h2><p>${info.texto}</p>`;
+    }
+  </script>
+</body>
+</html>
