@@ -15,17 +15,14 @@
 </head>
 
 <body>
-    <!-- Skip Link para acessibilidade -->
-    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
-
     <!-- Header -->
     <header class="header">
         <nav class="navbar">
             <div class="container">
                 <div class="nav-brand">
                     <div class="logo">
-                        <img src="logo-agentefit.jpg" alt="Logo AGenteFit" class="logo-icon">
-                        <img src="agentefit.jpg" alt="AGenteFit" class="logo-text">
+                        <img src="logo-agentefit.png" alt="Logo AGenteFit" class="logo-icon">
+                        <img src="agentefit.png" alt="AGenteFit" class="logo-text">
                     </div>
                 </div>
                 <ul class="nav-menu">
@@ -143,20 +140,6 @@
                         <p>Proporcionamos um acompanhamento personalizado, ajustando os treinos conforme o progresso de
                             cada indivíduo.</p>
                     </div>
-                    <!-- <div class="about-card">
-                        <div class="card-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3>Ambiente Acolhedor</h3>
-                        <p>Nossa academia é como uma família. Aqui você se sente em casa e motivado a dar o seu melhor.</p>
-                    </div>
-                    <div class="about-card">
-                        <div class="card-icon">
-                            <i class="fas fa-trophy"></i>
-                        </div>
-                        <h3>Resultados Reais</h3>
-                        <p>Focamos em resultados duradouros, trabalhando não apenas o físico, mas também o bem-estar mental.</p>
-                    </div> -->
                 </div>
             </div>
         </section>
@@ -201,6 +184,16 @@
                             <span>Clique para ver mais detalhes</span>
                         </div>
                     </div>
+                    <div class="service-card" id="functional-training-card" onclick="toggleService('functional-training')" title="Clique para ver mais detalhes">
+                        <div class="service-icon">
+                            <i class="fas fa-spa"></i>
+                        </div>
+                        <h3>Treinamento Funcional</h3>
+                        <p>Exercícios multiarticulares, baseados em movimentos naturais, usando o esforço fisíco e o peso do corpo como fortes aliados.</p>
+                        <div class="service-hint">
+                            <span>Clique para ver mais detalhes</span>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Service Details Area -->
@@ -210,72 +203,6 @@
                             <h4>💪 O que você vai encontrar:</h4>
                             <p>Nossa musculação é muito mais que apenas levantar pesos. É um programa completo pensado para transformar seu corpo de forma segura e eficiente, sempre com o acompanhamento personalizado da Luciana.</p>
                             
-                            <h4>🎯 Benefícios da Musculação:</h4>
-                            <ul class="benefits-list">
-                                <li><strong>Aumento da massa muscular:</strong> Desenvolvimento muscular progressivo e consistente</li>
-                                <li><strong>Melhora da força:</strong> Ganho de força funcional para o dia a dia</li>
-                                <li><strong>Definição corporal:</strong> Redução de gordura e melhora do tônus muscular</li>
-                                <li><strong>Fortalecimento ósseo:</strong> Prevenção de osteoporose e lesões</li>
-                                <li><strong>Melhora da postura:</strong> Correção de desequilíbrios musculares</li>
-                                <li><strong>Aceleração do metabolismo:</strong> Queima mais calorias mesmo em repouso</li>
-                            </ul>
-                            
-                            <h4>🏋️‍♀️ Nossa Metodologia:</h4>
-                            <div class="methodology-grid">
-                                <div class="method-item">
-                                    <i class="fas fa-clipboard-check"></i>
-                                    <div>
-                                        <h5>Avaliação Completa</h5>
-                                        <p>Análise postural, composição corporal e objetivos pessoais</p>
-                                    </div>
-                                </div>
-                                <div class="method-item">
-                                    <i class="fas fa-chart-line"></i>
-                                    <div>
-                                        <h5>Planejamento Individualizado</h5>
-                                        <p>Treinos específicos para seu nível e metas</p>
-                                    </div>
-                                </div>
-                                <div class="method-item">
-                                    <i class="fas fa-eye"></i>
-                                    <div>
-                                        <h5>Supervisão Constante</h5>
-                                        <p>Acompanhamento da execução e progressão</p>
-                                    </div>
-                                </div>
-                                <div class="method-item">
-                                    <i class="fas fa-sync-alt"></i>
-                                    <div>
-                                        <h5>Ajustes Regulares</h5>
-                                        <p>Evolução do treino conforme seu progresso</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <h4>⚡ Diferenciais AGenteFit:</h4>
-                            <div class="highlights-grid">
-                                <div class="highlight-item">
-                                    <span class="highlight-number">01</span>
-                                    <div>
-                                        <h5>Ambiente Acolhedor</h5>
-                                        <p>Espaço intimista onde você se sente à vontade para evoluir</p>
-                                    </div>
-                                </div>
-                                <div class="highlight-item">
-                                    <span class="highlight-number">02</span>
-                                    <div>
-                                        <h5>Atenção Personalizada</h5>
-                                        <p>Cada aluno recebe o tempo e cuidado que merece</p>
-                                    </div>
-                                </div>
-                                <div class="highlight-item">
-                                    <span class="highlight-number">03</span>
-                                    <div>
-                                        <h5>Equipamentos de Qualidade</h5>
-                                        <p>Sempre bem conservados e adequados para cada exercício</p>
-                                    </div>
-                                </div>
-                            </div>
                             
                             <div class="cta-section">
                                 <p><strong>Pronto para começar sua transformação?</strong></p>
@@ -289,45 +216,16 @@
                             <h4>🧘‍♀️ O que é o Pilates:</h4>
                             <p>O Pilates é um método de exercício físico que visa fortalecer o corpo, melhorar a flexibilidade e promover o equilíbrio e a coordenação. Foi desenvolvido por Joseph Pilates e inclui uma variedade de exercícios realizados com controle preciso, focando na respiração e na concentração.</p>
                             
-                            <h4>🎯 Benefícios do Pilates:</h4>
-                            <ul class="benefits-list">
-                                <li><strong>Fortalecimento do Core:</strong> Desenvolvimento dos músculos abdominais e da região lombar</li>
-                                <li><strong>Melhora da Postura:</strong> Correção de desalinhamentos e fortalecimento da coluna</li>
-                                <li><strong>Aumento da Flexibilidade:</strong> Alongamento e elasticidade muscular</li>
-                                <li><strong>Equilíbrio e Coordenação:</strong> Melhora da consciência corporal</li>
-                                <li><strong>Redução de Dores:</strong> Alívio de tensões e dores nas costas</li>
-                                <li><strong>Bem-estar Mental:</strong> Redução do estresse e melhora da concentração</li>
-                            </ul>
-                            
-                            <h4>🏋️‍♀️ Nossos Aparelhos:</h4>
-                            <div class="methodology-grid">
-                                <div class="method-item">
-                                    <i class="fas fa-chair"></i>
-                                    <div>
-                                        <h5>Chair</h5>
-                                        <p>Exercícios específicos para fortalecimento e alongamento</p>
-                                    </div>
-                                </div>
-                                <div class="method-item">
-                                    <i class="fas fa-bed"></i>
-                                    <div>
-                                        <h5>Cadillac</h5>
-                                        <p>Movimentos precisos com molas e barras</p>
-                                    </div>
-                                </div>
-                                <div class="method-item">
-                                    <i class="fas fa-dumbbell"></i>
-                                    <div>
-                                        <h5>Carrinho</h5>
-                                        <p>Exercícios dinâmicos e funcionais</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
                             <div class="cta-section">
                                 <p><strong>Pronto para experimentar o Pilates?</strong></p>
                                 <a href="#contact" class="btn btn-primary btn-small">Agendar Aula Experimental</a>
                             </div>
+                        </div>
+                    </div>
+                    <div class="service-details" id="functional-training-details">
+                        <div class="detailed-info">
+                            <h4>🏋️‍♀️ O que é o Treinamento Funcional:</h4>
+                            <p>O treinamento funcional é uma abordagem de exercícios que se concentra em movimentos que mimetizam atividades da vida diária. Ele visa melhorar a força, equilíbrio, flexibilidade e coordenação, priorizando padrões de movimento naturais e trabalhando múltiplos grupos musculares simultaneamente. Esse tipo de treinamento busca benefícios práticos para as atividades do dia a dia.</p>
                         </div>
                     </div>
                 </div>
@@ -419,8 +317,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="logo">
-                        <img src="logo-agentefit.jpg" alt="Logo AGenteFit" class="logo-icon">
-                        <img src="agentefit.jpg" alt="AGenteFit" class="logo-text">
+                        <img src="logo-agentefit.png" alt="Logo AGenteFit" class="logo-icon">
+                        <img src="agentefit.png" alt="AGenteFit" class="logo-text">
                     </div>
                     <p>Uma academia, gerenciada com muito amor pela Luciana Cavalcanti.</p>
                 </div>
