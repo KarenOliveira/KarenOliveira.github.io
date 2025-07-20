@@ -478,149 +478,147 @@ section {
 }
 
 /* Services Section */
-.modalidades-container {
-  display: flex;
-  gap: 3rem;
-  max-width: 1000px;
-  margin: 0 auto;
-  min-height: 500px;
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
 }
 
-.modalidades-menu {
-  width: 300px;
-  background: var(--bg-light);
-  border-radius: 20px;
-  padding: 2rem;
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--border-color);
-}
-
-.modalidade-btn {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  width: 100%;
-  padding: 1.5rem;
-  margin-bottom: 1rem;
-  border: none;
+.service-card {
   background: white;
-  border-radius: 15px;
-  cursor: pointer;
-  text-align: left;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow-md);
   transition: all 0.3s ease;
-  box-shadow: var(--shadow-sm);
   border: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
 }
 
-.modalidade-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-secondary);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
   border-color: var(--secondary-color);
 }
 
-.modalidade-btn.active {
+.service-icon {
+  width: 70px;
+  height: 70px;
   background: var(--gradient-primary);
-  color: var(--text-dark);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--primary-color);
-}
-
-.modalidade-btn i {
-  font-size: 1.5rem;
-  width: 30px;
-  text-align: center;
-}
-
-.modalidade-btn span {
-  font-weight: 600;
-  font-size: 1.1rem;
-}
-
-.modalidades-detalhes {
-  flex: 1;
-  background: white;
-  border-radius: 20px;
-  padding: 2.5rem;
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--border-color);
-}
-
-.detalhes-content h3 {
-  font-size: 2rem;
-  color: var(--text-dark);
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.modalidade-descricao {
-  font-size: 1.1rem;
-  color: var(--text-light);
-  line-height: 1.7;
-  margin-bottom: 2rem;
-}
-
-.modalidade-info {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-.info-section h4 {
-  font-size: 1.3rem;
-  color: var(--text-dark);
-  margin-bottom: 1rem;
-  font-weight: 600;
+  border-radius: 50%;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-md);
 }
 
-.info-section h4 i {
-  color: var(--primary-color);
+.service-icon i {
+  font-size: 1.8rem;
+  color: white;
 }
 
-.beneficios-list,
-.equipamentos-list {
+.service-card h3 {
+  font-size: 1.4rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.service-card p {
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.service-card ul {
   list-style: none;
 }
 
-.beneficios-list li,
-.equipamentos-list li {
+.service-card li {
   color: var(--text-light);
-  margin-bottom: 0.8rem;
-  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
   position: relative;
-  line-height: 1.6;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  padding-left: 1.5rem;
 }
 
-.beneficios-list li i {
+.service-card li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
   color: var(--secondary-color);
-  font-size: 0.9rem;
+  font-weight: bold;
 }
 
-.equipamentos-list li i {
-  color: var(--primary-color);
-  font-size: 0.9rem;
+/* Service Cards Styles */
+.service-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
-.detalhes-placeholder {
+.service-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--secondary-color);
+}
+
+.service-card.active {
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-2px);
+}
+
+.service-hint {
   text-align: center;
-  padding: 3rem;
+  margin-top: 1.5rem;
+  padding: 0.8rem;
+  background: linear-gradient(135deg, rgba(241, 196, 15, 0.05) 0%, rgba(78, 205, 196, 0.05) 100%);
+  border-radius: 10px;
+  border: 1px dashed rgba(78, 205, 196, 0.3);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-hint {
+  background: linear-gradient(135deg, rgba(241, 196, 15, 0.1) 0%, rgba(78, 205, 196, 0.1) 100%);
+  border-color: var(--secondary-color);
+}
+
+.service-hint span {
   color: var(--text-gray);
+  font-size: 0.85rem;
+  font-weight: 500;
+  font-style: italic;
 }
 
-.detalhes-placeholder i {
-  font-size: 4rem;
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-  display: block;
+.service-card:hover .service-hint span {
+  color: var(--secondary-color);
 }
 
+/* Service Details Area */
+.service-details-area {
+  margin-top: 3rem;
+  padding: 3rem;
+  background: var(--bg-light);
+  border-radius: 20px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  display: none;
+  animation: fadeInUp 0.5s ease;
+}
 
+.service-details {
+  display: none;
+}
 
 .service-details.active {
   display: block;
@@ -1153,27 +1151,9 @@ section {
     justify-content: center;
   }
   
-  .about-grid {
+  .about-grid,
+  .services-grid {
     grid-template-columns: 1fr;
-  }
-  
-  .modalidades-container {
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  .modalidades-menu {
-    width: 100%;
-    order: 2;
-  }
-  
-  .modalidades-detalhes {
-    order: 1;
-  }
-  
-  .modalidade-info {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
   }
   
   .trainer-content {
@@ -1227,24 +1207,9 @@ section {
     font-size: 0.9rem;
   }
   
-  .about-card {
+  .about-card,
+  .service-card {
     padding: 2rem;
-  }
-  
-  .modalidades-menu {
-    padding: 1.5rem;
-  }
-  
-  .modalidade-btn {
-    padding: 1.2rem;
-  }
-  
-  .modalidades-detalhes {
-    padding: 2rem;
-  }
-  
-  .detalhes-content h3 {
-    font-size: 1.8rem;
   }
   
   .image-placeholder {
@@ -1282,7 +1247,8 @@ section {
   }
 }
 
-.about-card {
+.about-card,
+.service-card {
   animation: fadeInUp 0.6s ease forwards;
 }
 
@@ -1294,15 +1260,11 @@ section {
   animation-delay: 0.2s;
 }
 
-.modalidade-btn {
-  animation: fadeInUp 0.6s ease forwards;
-}
-
-.modalidade-btn:nth-child(2) {
+.service-card:nth-child(2) {
   animation-delay: 0.1s;
 }
 
-.modalidade-btn:nth-child(3) {
+.service-card:nth-child(3) {
   animation-delay: 0.2s;
 }
 

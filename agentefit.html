@@ -152,29 +152,76 @@
                     <h2>Nossas Modalidades</h2>
                     <p>Descubra a atividade perfeita para você</p>
                 </div>
-                <div class="modalidades-container">
-                    <div class="modalidades-menu">
-                        <button class="modalidade-btn active" onclick="mostrarDetalhes('musculacao')">
+                <div class="services-grid">
+                    <div class="service-card" id="musculacao-card" onclick="toggleService('musculacao')" title="Clique para ver mais detalhes">
+                        <div class="service-icon">
                             <i class="fas fa-dumbbell"></i>
-                            <span>Musculação</span>
-                        </button>
-                        <button class="modalidade-btn" onclick="mostrarDetalhes('pilates')">
-                            <i class="fas fa-spa"></i>
-                            <span>Pilates</span>
-                        </button>
-                        <button class="modalidade-btn" onclick="mostrarDetalhes('functional')">
-                            <i class="fas fa-running"></i>
-                            <span>Treinamento Funcional</span>
-                        </button>
+                        </div>
+                        <h3>Musculação</h3>
+                        <p>Treinos personalizados para ganho de massa muscular e definição corporal.</p>
+                        <ul>
+                            <li>Peso Livre</li>
+                            <li>Halteres</li>
+                            <li>Barras</li>
+                            <li>Anilhas</li>
+                            <li>Acessórios</li>
+                        </ul>
+                        <div class="service-hint">
+                            <span>Clique para ver mais detalhes</span>
+                        </div>
                     </div>
-                    <div class="modalidades-detalhes" id="modalidades-detalhes">
-                        <div class="detalhes-content">
-                            <h3>Escolha uma modalidade</h3>
-                            <p>Clique em uma das opções ao lado para ver os detalhes completos de cada modalidade.</p>
-                            <div class="detalhes-placeholder">
-                                <i class="fas fa-heart"></i>
-                                <p>Todas as modalidades são personalizadas para você!</p>
+                    <div class="service-card" id="pilates-card" onclick="toggleService('pilates')" title="Clique para ver mais detalhes">
+                        <div class="service-icon">
+                            <i class="fas fa-spa"></i>
+                        </div>
+                        <h3>Pilates</h3>
+                        <p>Método de exercício que combina alongamento, força e controle da respiração. Ele melhora a postura, a flexibilidade e fortalece os músculos do core (abdômen e lombar), sendo ideal para todas as idades e níveis de condicionamento.</p>
+                        <div class="service-hint">
+                            <span>Clique para ver mais detalhes</span>
+                        </div>
+                    </div>
+                    <div class="service-card" id="functional-training-card" onclick="toggleService('functional-training')" title="Clique para ver mais detalhes">
+                        <div class="service-icon">
+                            <i class="fas fa-spa"></i>
+                        </div>
+                        <h3>Treinamento Funcional</h3>
+                        <p>Exercícios multiarticulares, baseados em movimentos naturais, usando o esforço fisíco e o peso do corpo como fortes aliados.</p>
+                        <div class="service-hint">
+                            <span>Clique para ver mais detalhes</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Details Area -->
+                <div class="service-details-area" id="service-details">
+                    <div class="service-details" id="musculacao-details">
+                        <div class="detailed-info">
+                            <h4>💪 O que você vai encontrar:</h4>
+                            <p>Nossa musculação é muito mais que apenas levantar pesos. É um programa completo pensado para transformar seu corpo de forma segura e eficiente, sempre com o acompanhamento personalizado da Luciana.</p>
+                            
+                            
+                            <div class="cta-section">
+                                <p><strong>Pronto para começar sua transformação?</strong></p>
+                                <a href="#contact" class="btn btn-primary btn-small">Agendar Avaliação</a>
                             </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-details" id="pilates-details">
+                        <div class="detailed-info">
+                            <h4>🧘‍♀️ O que é o Pilates:</h4>
+                            <p>O Pilates é um método de exercício físico que visa fortalecer o corpo, melhorar a flexibilidade e promover o equilíbrio e a coordenação. Foi desenvolvido por Joseph Pilates e inclui uma variedade de exercícios realizados com controle preciso, focando na respiração e na concentração.</p>
+                            
+                            <div class="cta-section">
+                                <p><strong>Pronto para experimentar o Pilates?</strong></p>
+                                <a href="#contact" class="btn btn-primary btn-small">Agendar Aula Experimental</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-details" id="functional-training-details">
+                        <div class="detailed-info">
+                            <h4>🏋️‍♀️ O que é o Treinamento Funcional:</h4>
+                            <p>O treinamento funcional é uma abordagem de exercícios que se concentra em movimentos que mimetizam atividades da vida diária. Ele visa melhorar a força, equilíbrio, flexibilidade e coordenação, priorizando padrões de movimento naturais e trabalhando múltiplos grupos musculares simultaneamente. Esse tipo de treinamento busca benefícios práticos para as atividades do dia a dia.</p>
                         </div>
                     </div>
                 </div>
@@ -324,121 +371,57 @@
             });
         });
 
-        // Dados das modalidades
-        const modalidadesData = {
-            musculacao: {
-                titulo: 'Musculação',
-                descricao: 'Treinos personalizados para ganho de massa muscular e definição corporal.',
-                beneficios: [
-                    'Ganho de força e massa muscular',
-                    'Melhora da postura e estabilidade',
-                    'Aumento do metabolismo',
-                    'Prevenção de lesões',
-                    'Melhora da autoestima'
-                ],
-                equipamentos: [
-                    'Peso Livre',
-                    'Halteres',
-                    'Barras',
-                    'Anilhas',
-                    'Acessórios especializados'
-                ],
-                cta: 'Agendar Avaliação'
-            },
-            pilates: {
-                titulo: 'Pilates',
-                descricao: 'Método de exercício que combina alongamento, força e controle da respiração. Melhora a postura, flexibilidade e fortalece os músculos do core.',
-                beneficios: [
-                    'Fortalecimento do core',
-                    'Melhora da postura',
-                    'Aumento da flexibilidade',
-                    'Redução do estresse',
-                    'Prevenção de dores nas costas'
-                ],
-                equipamentos: [
-                    'Reformer',
-                    'Cadillac',
-                    'Chair',
-                    'Mat',
-                    'Acessórios de Pilates'
-                ],
-                cta: 'Agendar Aula Experimental'
-            },
-            functional: {
-                titulo: 'Treinamento Funcional',
-                descricao: 'Exercícios multiarticulares baseados em movimentos naturais, usando o esforço físico e o peso do corpo como aliados.',
-                beneficios: [
-                    'Melhora da coordenação motora',
-                    'Aumento da resistência',
-                    'Queima de calorias',
-                    'Fortalecimento geral',
-                    'Melhora da mobilidade'
-                ],
-                equipamentos: [
-                    'Peso do corpo',
-                    'Cordas',
-                    'Kettlebells',
-                    'Medicine Balls',
-                    'TRX'
-                ],
-                cta: 'Agendar Aula Experimental'
-            }
-        };
+        // Service Toggle Functionality
+        function toggleService(serviceName) {
+            const detailsArea = document.getElementById('service-details');
+            const allDetails = detailsArea.querySelectorAll('.service-details');
+            const targetDetails = document.getElementById(serviceName + '-details');
+            const allCards = document.querySelectorAll('.service-card');
+            const targetCard = document.getElementById(serviceName + '-card');
 
-        // Função para mostrar detalhes das modalidades
-        function mostrarDetalhes(modalidade) {
-            const dados = modalidadesData[modalidade];
-            const container = document.getElementById('modalidades-detalhes');
-            const allButtons = document.querySelectorAll('.modalidade-btn');
-            
-            // Remove active class from all buttons
-            allButtons.forEach(btn => btn.classList.remove('active'));
-            
-            // Add active class to clicked button
-            event.target.closest('.modalidade-btn').classList.add('active');
-            
-            // Create the content
-            const beneficiosHTML = dados.beneficios.map(beneficio => 
-                `<li><i class="fas fa-check"></i> ${beneficio}</li>`
-            ).join('');
-            
-            const equipamentosHTML = dados.equipamentos.map(equipamento => 
-                `<li><i class="fas fa-dumbbell"></i> ${equipamento}</li>`
-            ).join('');
-            
-            container.innerHTML = `
-                <div class="detalhes-content">
-                    <h3>${dados.titulo}</h3>
-                    <p class="modalidade-descricao">${dados.descricao}</p>
-                    
-                    <div class="modalidade-info">
-                        <div class="info-section">
-                            <h4><i class="fas fa-star"></i> Benefícios</h4>
-                            <ul class="beneficios-list">
-                                ${beneficiosHTML}
-                            </ul>
-                        </div>
-                        
-                        <div class="info-section">
-                            <h4><i class="fas fa-tools"></i> Equipamentos</h4>
-                            <ul class="equipamentos-list">
-                                ${equipamentosHTML}
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="cta-section">
-                        <p><strong>Pronto para começar?</strong></p>
-                        <a href="#contact" class="btn btn-primary btn-small">${dados.cta}</a>
-                    </div>
-                </div>
-            `;
+            // Remove active class from all cards
+            allCards.forEach(card => {
+                card.classList.remove('active');
+            });
+
+            // Hide all details
+            allDetails.forEach(detail => {
+                detail.style.display = 'none';
+            });
+
+            // Check if the same service is already active
+            if (targetDetails.style.display === 'block') {
+                // Close the details
+                targetDetails.style.display = 'none';
+                detailsArea.style.display = 'none';
+                targetCard.classList.remove('active');
+            } else {
+                // Show the selected service details
+                targetDetails.style.display = 'block';
+                detailsArea.style.display = 'block';
+                targetCard.classList.add('active');
+
+                // Smooth scroll to details area
+                setTimeout(() => {
+                    detailsArea.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start',
+                        inline: 'nearest'
+                    });
+                }, 100);
+            }
         }
 
-        // Initialize modalidades on page load
+        // Initialize service details on page load
         document.addEventListener('DOMContentLoaded', function () {
-            // Show default content (musculacao)
-            mostrarDetalhes('musculacao');
+            const detailsArea = document.getElementById('service-details');
+            const allDetails = detailsArea.querySelectorAll('.service-details');
+            
+            // Hide all details initially
+            allDetails.forEach(detail => {
+                detail.style.display = 'none';
+            });
+            detailsArea.style.display = 'none';
             
             // Criar partículas
             createParticles();
