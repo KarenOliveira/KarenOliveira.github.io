@@ -45,6 +45,7 @@
     <main id="main-content">
         <!-- Hero Section -->
         <section id="home" class="hero">
+            <div class="particles" id="particles"></div>
             <div class="container">
                 <div class="hero-content">
                     <h1 class="hero-title">
@@ -421,7 +422,56 @@
                 detail.style.display = 'none';
             });
             detailsArea.style.display = 'none';
+            
+            // Criar partículas
+            createParticles();
         });
+
+        // Criar partículas de fundo
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            
+            const particleCount = 20;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle-yellow';
+                
+                // Tamanho aleatório
+                const size = Math.random() * 4 + 2;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                
+                // Posição aleatória
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                
+                // Duração da animação aleatória
+                particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+                particle.style.animationDelay = Math.random() * 2 + 's';
+                
+                particlesContainer.appendChild(particle);
+            }
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle-turquoise';
+                
+                // Tamanho aleatório
+                const size = Math.random() * 6 + 3;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                
+                // Posição aleatória
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                
+                // Duração da animação aleatória
+                particle.style.animationDuration = (Math.random() * 4 + 4) + 's';
+                particle.style.animationDelay = Math.random() * 3 + 's';
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
     </script>
 </body>
 
