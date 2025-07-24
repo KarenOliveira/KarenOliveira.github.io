@@ -604,21 +604,285 @@ section {
   color: var(--secondary-color);
 }
 
-/* Service Details Area */
-.service-details-area {
+/* Services Layout */
+.services-layout {
+  display: flex;
+  gap: 3rem;
   margin-top: 3rem;
-  padding: 3rem;
+  min-height: 500px;
+}
+
+/* Services Menu */
+.services-menu {
+  width: 300px;
   background: var(--bg-light);
-  border-radius: 20px;
+  border-radius: 15px;
+  padding: 1.5rem;
   box-shadow: var(--shadow-md);
   border: 1px solid var(--border-color);
-  display: none;
-  animation: fadeInUp 0.5s ease;
+  height: fit-content;
+}
+
+.service-menu-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  margin-bottom: 0.5rem;
+  border: none;
+  background: var(--bg-white);
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  color: var(--text-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.service-menu-btn:hover {
+  background: var(--primary-color);
+  color: var(--bg-white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.service-menu-btn.active {
+  background: var(--primary-color);
+  color: var(--bg-white);
+  box-shadow: var(--shadow-md);
+}
+
+.service-menu-btn i {
+  font-size: 1.2rem;
+  width: 20px;
+  text-align: center;
+}
+
+.service-menu-btn span {
+  font-weight: 500;
+}
+
+/* Services Content */
+.services-content {
+  flex: 1;
+  background: var(--bg-light);
+  border-radius: 15px;
+  padding: 2.5rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
 }
 
 .service-details {
   display: none;
+  animation: fadeInUp 0.5s ease;
 }
+
+.service-details:first-child {
+  display: block;
+}
+
+/* Detailed Info */
+.detailed-info h4 {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.detailed-info p {
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+/* Benefits and Equipment Sections */
+.benefits-section,
+.equipment-section {
+  margin-bottom: 2rem;
+}
+
+.benefits-section h5,
+.equipment-section h5 {
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.benefits-section h5 i {
+  color: var(--primary-color);
+}
+
+.equipment-section h5 i {
+  color: var(--secondary-color);
+}
+
+.benefits-section ul,
+.equipment-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.benefits-section li,
+.equipment-section li {
+  color: var(--text-light);
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.benefits-section li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.equipment-section li::before {
+  content: '🔧';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
+
+/* CTA Section */
+.cta-section {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--border-color);
+  text-align: center;
+}
+
+.cta-section p {
+  margin-bottom: 1.5rem;
+  color: var(--text-dark);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+  .cta-section .btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+/* Botão Voltar à Lista - Visível apenas em mobile */
+.back-to-list-mobile {
+  display: none;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.back-to-list-mobile .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 0.95rem;
+  background: var(--bg-gray);
+  color: var(--text-dark);
+  border: 2px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.back-to-list-mobile .btn:hover {
+  background: var(--secondary-color);
+  color: var(--bg-white);
+  border-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.back-to-list-mobile .btn i {
+  font-size: 0.9rem;
+}
+  
+  /* Services Layout Responsive */
+  @media (max-width: 768px) {
+    .services-layout {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .services-menu {
+      width: 100%;
+      order: 1;
+    }
+    
+    .services-content {
+      order: 2;
+      padding: 2rem;
+    }
+    
+    .service-menu-btn {
+      padding: 0.8rem 1.2rem;
+      font-size: 0.95rem;
+    }
+    
+    .detailed-info h4 {
+      font-size: 1.3rem;
+    }
+    
+    .detailed-info p {
+      font-size: 1rem;
+    }
+    
+    .benefits-section h5,
+    .equipment-section h5 {
+      font-size: 1.1rem;
+    }
+    
+    .cta-section .btn {
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+    }
+    
+    /* Mostrar botão voltar à lista em mobile */
+    .back-to-list-mobile {
+      display: block;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .services-layout {
+      gap: 1.5rem;
+    }
+    
+    .services-menu {
+      padding: 1rem;
+    }
+    
+    .services-content {
+      padding: 1.5rem;
+    }
+    
+    .service-menu-btn {
+      padding: 0.7rem 1rem;
+      font-size: 0.9rem;
+    }
+    
+    .detailed-info h4 {
+      font-size: 1.2rem;
+    }
+    
+    .cta-section {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+    }
+  }
 
 .service-details.active {
   display: block;

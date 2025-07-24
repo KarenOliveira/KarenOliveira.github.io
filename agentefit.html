@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AGenteFit | Luciana Cavalcanti</title>
-    <meta name="description"
-        content="AGenteFit">
+    <meta name="description" content="AGenteFit">
     <link rel="stylesheet" href="agentefit.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
@@ -150,81 +149,194 @@
             <div class="container">
                 <div class="section-header">
                     <h2>Nossas Modalidades</h2>
-                    <p>Descubra a atividade perfeita para você</p>
+                    <p>Descubra a atividade perfeita para você, clique no botão para saber mais sobre cada modalidade.</p>
                 </div>
-                <div class="services-grid">
-                    <div class="service-card" id="musculacao-card" onclick="toggleService('musculacao')" title="Clique para ver mais detalhes">
-                        <div class="service-icon">
+                <div class="services-layout">
+                    <!-- Menu lateral -->
+                    <div class="services-menu">
+                        <button class="service-menu-btn active" onclick="mostrarDetalhes('musculacao')">
                             <i class="fas fa-dumbbell"></i>
-                        </div>
-                        <h3>Musculação</h3>
-                        <p>Treinos personalizados para ganho de massa muscular e definição corporal.</p>
-                        <ul>
-                            <li>Peso Livre</li>
-                            <li>Halteres</li>
-                            <li>Barras</li>
-                            <li>Anilhas</li>
-                            <li>Acessórios</li>
-                        </ul>
-                        <div class="service-hint">
-                            <span>Clique para ver mais detalhes</span>
-                        </div>
-                    </div>
-                    <div class="service-card" id="pilates-card" onclick="toggleService('pilates')" title="Clique para ver mais detalhes">
-                        <div class="service-icon">
+                            <span>Musculação</span>
+                        </button>
+                        <button class="service-menu-btn" onclick="mostrarDetalhes('pilates')">
                             <i class="fas fa-spa"></i>
-                        </div>
-                        <h3>Pilates</h3>
-                        <p>Método de exercício que combina alongamento, força e controle da respiração. Ele melhora a postura, a flexibilidade e fortalece os músculos do core (abdômen e lombar), sendo ideal para todas as idades e níveis de condicionamento.</p>
-                        <div class="service-hint">
-                            <span>Clique para ver mais detalhes</span>
-                        </div>
+                            <span>Pilates</span>
+                        </button>
+                        <button class="service-menu-btn"
+                            onclick="mostrarDetalhes('functional-training-full-body-hiit')">
+                            <i class="fas fa-running"></i>
+                            <span>Treinamento Funcional Full Body HIIT</span>
+                        </button>
+                        <button class="service-menu-btn"
+                            onclick="mostrarDetalhes('functional-training-full-body-hirt')">
+                            <i class="fas fa-running"></i>
+                            <span>Treinamento Funcional Full Body HIRT</span>
+                        </button>
                     </div>
-                    <div class="service-card" id="functional-training-card" onclick="toggleService('functional-training')" title="Clique para ver mais detalhes">
-                        <div class="service-icon">
-                            <i class="fas fa-spa"></i>
+
+                    <!-- Área de detalhes -->
+                    <div class="services-content" id="services-content">
+                        <div class="service-details" id="musculacao-details">
+                            <div class="detailed-info">
+                                <h4>💪 O que é a Musculação:</h4>
+                                <p>A musculação é uma forma de exercício que utiliza resistência, como pesos livres,
+                                    máquinas ou o próprio peso corporal, para fortalecer e desenvolver os músculos. O
+                                    treinamento de musculação é projetado para promover o crescimento muscular, melhorar
+                                    a força, resistência e definição muscular. É uma prática comum em academias e pode
+                                    ser adaptada para diferentes objetivos, como ganho de massa muscular, perda de peso
+                                    ou condicionamento físico geral.</p>
+                                <!--
+                                <div class="benefits-section">
+                                    <h5><i class="fas fa-star"></i> Benefícios Principais</h5>
+                                    <ul>
+                                        <li>Ganho de força e massa muscular</li>
+                                        <li>Melhora da postura e estabilidade</li>
+                                        <li>Aumento do metabolismo</li>
+                                        <li>Prevenção de lesões</li>
+                                        <li>Melhora da autoestima</li>
+                                    </ul>
+                                </div>
+                            -->
+                                <div class="cta-section">
+                                    <p><strong>Pronto para começar sua transformação?</strong></p>
+                                    <a href="#contact" class="btn btn-primary">Agendar Avaliação</a>
+                                </div>
+                                <div class="back-to-list-mobile">
+                                    <button class="btn btn-secondary" onclick="voltarParaLista()">
+                                        <i class="fas fa-arrow-left"></i>
+                                        Voltar à Lista de Modalidades
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-                        <h3>Treinamento Funcional</h3>
-                        <p>Exercícios multiarticulares, baseados em movimentos naturais, usando o esforço fisíco e o peso do corpo como fortes aliados.</p>
-                        <div class="service-hint">
-                            <span>Clique para ver mais detalhes</span>
+
+                        <div class="service-details" id="pilates-details">
+                            <div class="detailed-info">
+                                <h4>🧘‍♀️ O que é o Pilates:</h4>
+                                <p>O Pilates é um método de exercício físico que visa fortalecer o corpo, melhorar a
+                                    flexibilidade e promover o equilíbrio e a coordenação. Foi desenvolvido por Joseph
+                                    Pilates e inclui uma variedade de exercícios realizados com controle preciso,
+                                    focando na respiração e na concentração.</p>
+                                <div class="benefits-section">
+                                    <h5><i class="fas fa-star"></i> Benefícios Principais</h5>
+                                    <ul>
+                                        <li>Fortalecimento do core</li>
+                                        <li>Melhora da postura</li>
+                                        <li>Aumento da flexibilidade</li>
+                                        <li>Redução do estresse</li>
+                                        <li>Prevenção de dores nas costas</li>
+                                    </ul>
+                                </div>
+                                <div class="equipment-section">
+                                    <h5><i class="fas fa-tools"></i> Equipamentos Utilizados</h5>
+                                    <ul>
+                                        <li>Reformer</li>
+                                        <li>Cadillac</li>
+                                        <li>Chair</li>
+                                        <li>Mat</li>
+                                        <li>Acessórios de Pilates</li>
+                                    </ul>
+                                </div>
+
+                                <div class="cta-section">
+                                    <p><strong>Pronto para experimentar o Pilates?</strong></p>
+                                    <a href="#contact" class="btn btn-primary">Agendar Aula Experimental</a>
+                                </div>
+                                <div class="back-to-list-mobile">
+                                    <button class="btn btn-secondary" onclick="voltarParaLista()">
+                                        <i class="fas fa-arrow-left"></i>
+                                        Voltar à Lista de Modalidades
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                
-                <!-- Service Details Area -->
-                <div class="service-details-area" id="service-details">
-                    <div class="service-details" id="musculacao-details">
-                        <div class="detailed-info">
-                            <h4>💪 O que você vai encontrar:</h4>
-                            <p>Nossa musculação é muito mais que apenas levantar pesos. É um programa completo pensado para transformar seu corpo de forma segura e eficiente, sempre com o acompanhamento personalizado da Luciana.</p>
-                            
-                            
+
+                        <div class="service-details" id="functional-training-full-body-hiit-details">
+                            <div class="detailed-info">
+                                <h4>🏋️‍♀️ O que é o Treinamento Funcional Full Body HIIT:</h4>
+                                <p>HIIT (High-Intensity Interval Training) é um método de treinamento que alterna entre
+                                    períodos de exercícios intensos e curtos períodos de descanso ou atividade de baixa
+                                    intensidade. Esse estilo de treino é eficaz para melhorar a capacidade
+                                    cardiovascular, queimar calorias e promover adaptações metabólicas. O HIIT é
+                                    conhecido por proporcionar resultados em um curto período de tempo devido à sua
+                                    intensidade.</p>
+                            </div>
+                            <!--
+                            <div class="benefits-section">
+                                <h5><i class="fas fa-star"></i> Benefícios Principais</h5>
+                                <ul>
+                                    <li>Melhora da coordenação motora</li>
+                                    <li>Aumento da resistência</li>
+                                    <li>Queima de calorias</li>
+                                    <li>Fortalecimento geral</li>
+                                    <li>Melhora da mobilidade</li>
+                                </ul>
+                                <div class="equipment-section">
+                                    <h5><i class="fas fa-tools"></i> Equipamentos Utilizados</h5>
+                                    <ul>
+                                        <li>Peso do corpo</li>
+                                        <li>Cordas</li>
+                                        <li>Kettlebells</li>
+                                        <li>Medicine Balls</li>
+                                        <li>TRX</li>
+                                    </ul>
+                                </div>
+                                -->
                             <div class="cta-section">
-                                <p><strong>Pronto para começar sua transformação?</strong></p>
-                                <a href="#contact" class="btn btn-primary btn-small">Agendar Avaliação</a>
+                                <p><strong>Pronto para experimentar o Treinamento Funcional Full Body HIIT?</strong></p>
+                                <a href="#contact" class="btn btn-primary">Agendar Aula Experimental</a>
+                            </div>
+                            <div class="back-to-list-mobile">
+                                <button class="btn btn-secondary" onclick="voltarParaLista()">
+                                    <i class="fas fa-arrow-left"></i>
+                                    Voltar à Lista de Modalidades
+                                </button>
+                            </div>
+                        </div>
+                        <div class="service-details" id="functional-training-full-body-hirt-details">
+                            <div class="detailed-info">
+                                <h4>🏋️‍♀️ O que é o Treinamento Funcional Full Body HIRT:</h4>
+                                <p>HIRT (High-Intensity Resistance Training) é um tipo de treinamento que combina exercícios de resistência com alta intensidade. Ao contrário do HIIT, que se concentra em exercícios cardiovasculares, o HIRT envolve movimentos de força com carga, visando melhorar a força muscular, a resistência e queimar calorias. É uma abordagem que pode ser adaptada para diferentes níveis de condicionamento físico e objetivos.</p>
+                            </div>
+                            <!--
+                            <div class="benefits-section">
+                                <h5><i class="fas fa-star"></i> Benefícios Principais</h5>
+                                <ul>
+                                    <li>Melhora da coordenação motora</li>
+                                    <li>Aumento da resistência</li>
+                                    <li>Queima de calorias</li>
+                                    <li>Fortalecimento geral</li>
+                                    <li>Melhora da mobilidade</li>
+                                </ul>
+                                <div class="equipment-section">
+                                    <h5><i class="fas fa-tools"></i> Equipamentos Utilizados</h5>
+                                    <ul>
+                                        <li>Peso do corpo</li>
+                                        <li>Cordas</li>
+                                        <li>Kettlebells</li>
+                                        <li>Medicine Balls</li>
+                                        <li>TRX</li>
+                                    </ul>
+                                </div>
+                                -->
+                            <div class="cta-section">
+                                <p><strong>Pronto para experimentar o Treinamento Funcional Full Body HIRT?</strong></p>
+                                <a href="#contact" class="btn btn-primary">Agendar Aula Experimental</a>
+                            </div>
+                            <div class="back-to-list-mobile">
+                                <button class="btn btn-secondary" onclick="voltarParaLista()">
+                                    <i class="fas fa-arrow-left"></i>
+                                    Voltar à Lista de Modalidades
+                                </button>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="service-details" id="pilates-details">
-                        <div class="detailed-info">
-                            <h4>🧘‍♀️ O que é o Pilates:</h4>
-                            <p>O Pilates é um método de exercício físico que visa fortalecer o corpo, melhorar a flexibilidade e promover o equilíbrio e a coordenação. Foi desenvolvido por Joseph Pilates e inclui uma variedade de exercícios realizados com controle preciso, focando na respiração e na concentração.</p>
-                            
-                            <div class="cta-section">
-                                <p><strong>Pronto para experimentar o Pilates?</strong></p>
-                                <a href="#contact" class="btn btn-primary btn-small">Agendar Aula Experimental</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-details" id="functional-training-details">
-                        <div class="detailed-info">
-                            <h4>🏋️‍♀️ O que é o Treinamento Funcional:</h4>
-                            <p>O treinamento funcional é uma abordagem de exercícios que se concentra em movimentos que mimetizam atividades da vida diária. Ele visa melhorar a força, equilíbrio, flexibilidade e coordenação, priorizando padrões de movimento naturais e trabalhando múltiplos grupos musculares simultaneamente. Esse tipo de treinamento busca benefícios práticos para as atividades do dia a dia.</p>
-                        </div>
-                    </div>
                 </div>
+            </div>
+            </div>
+
+
             </div>
         </section>
 
@@ -371,17 +483,16 @@
             });
         });
 
-        // Service Toggle Functionality
-        function toggleService(serviceName) {
-            const detailsArea = document.getElementById('service-details');
-            const allDetails = detailsArea.querySelectorAll('.service-details');
+        // Service Details Functionality
+        function mostrarDetalhes(serviceName) {
+            const contentArea = document.getElementById('services-content');
+            const allDetails = contentArea.querySelectorAll('.service-details');
             const targetDetails = document.getElementById(serviceName + '-details');
-            const allCards = document.querySelectorAll('.service-card');
-            const targetCard = document.getElementById(serviceName + '-card');
+            const allButtons = document.querySelectorAll('.service-menu-btn');
 
-            // Remove active class from all cards
-            allCards.forEach(card => {
-                card.classList.remove('active');
+            // Remove active class from all buttons
+            allButtons.forEach(btn => {
+                btn.classList.remove('active');
             });
 
             // Hide all details
@@ -389,40 +500,40 @@
                 detail.style.display = 'none';
             });
 
-            // Check if the same service is already active
-            if (targetDetails.style.display === 'block') {
-                // Close the details
-                targetDetails.style.display = 'none';
-                detailsArea.style.display = 'none';
-                targetCard.classList.remove('active');
-            } else {
-                // Show the selected service details
-                targetDetails.style.display = 'block';
-                detailsArea.style.display = 'block';
-                targetCard.classList.add('active');
+            // Show selected details and activate button
+            targetDetails.style.display = 'block';
+            const activeButton = document.querySelector(`[onclick="mostrarDetalhes('${serviceName}')"]`);
+            if (activeButton) {
+                activeButton.classList.add('active');
+            }
+        }
 
-                // Smooth scroll to details area
-                setTimeout(() => {
-                    detailsArea.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start',
-                        inline: 'nearest'
-                    });
-                }, 100);
+        // Função para voltar à lista de modalidades (mobile)
+        function voltarParaLista() {
+            // Fazer scroll suave até a seção de serviços
+            const servicesSection = document.getElementById('services');
+            if (servicesSection) {
+                servicesSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
             }
         }
 
         // Initialize service details on page load
         document.addEventListener('DOMContentLoaded', function () {
-            const detailsArea = document.getElementById('service-details');
-            const allDetails = detailsArea.querySelectorAll('.service-details');
-            
-            // Hide all details initially
-            allDetails.forEach(detail => {
-                detail.style.display = 'none';
+            const contentArea = document.getElementById('services-content');
+            const allDetails = contentArea.querySelectorAll('.service-details');
+
+            // Hide all details initially except the first one
+            allDetails.forEach((detail, index) => {
+                if (index === 0) {
+                    detail.style.display = 'block';
+                } else {
+                    detail.style.display = 'none';
+                }
             });
-            detailsArea.style.display = 'none';
-            
+
             // Criar partículas
             createParticles();
         });
@@ -430,45 +541,45 @@
         // Criar partículas de fundo
         function createParticles() {
             const particlesContainer = document.getElementById('particles');
-            
+
             const particleCount = 20;
 
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'particle-yellow';
-                
+
                 // Tamanho aleatório
                 const size = Math.random() * 4 + 2;
                 particle.style.width = size + 'px';
                 particle.style.height = size + 'px';
-                
+
                 // Posição aleatória
                 particle.style.left = Math.random() * 100 + '%';
                 particle.style.top = Math.random() * 100 + '%';
-                
+
                 // Duração da animação aleatória
                 particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
                 particle.style.animationDelay = Math.random() * 2 + 's';
-                
+
                 particlesContainer.appendChild(particle);
             }
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'particle-turquoise';
-                
+
                 // Tamanho aleatório
                 const size = Math.random() * 6 + 3;
                 particle.style.width = size + 'px';
                 particle.style.height = size + 'px';
-                
+
                 // Posição aleatória
                 particle.style.left = Math.random() * 100 + '%';
                 particle.style.top = Math.random() * 100 + '%';
-                
+
                 // Duração da animação aleatória
                 particle.style.animationDuration = (Math.random() * 4 + 4) + 's';
                 particle.style.animationDelay = Math.random() * 3 + 's';
-                
+
                 particlesContainer.appendChild(particle);
             }
         }
