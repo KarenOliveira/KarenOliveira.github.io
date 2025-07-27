@@ -569,6 +569,7 @@
 
     <!-- Footer -->
     <footer class="footer">
+        <div class="particles-footer" id="particles-footer"></div>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
@@ -578,12 +579,8 @@
                     </div>
                     <p>Um estúdio de treinamento físico, gerenciado com muito amor pela Luciana Cavalcanti.</p>
                 </div>
-                
-                <div class="footer-section">
-                    <h4>Contato</h4>
-                    <p><i class="fas fa-phone"></i> (XX) XXXX-XXXX</p>
-                </div>
-                <div class="footer-section">
+            
+                <div class="footer-section footer-social">
                     <h4>Redes Sociais</h4>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
@@ -676,6 +673,7 @@
 
             // Criar partículas
             createParticles();
+            createFooterParticles();
         });
 
         // Criar partículas de fundo
@@ -703,6 +701,55 @@
 
                 particlesContainer.appendChild(particle);
             }
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle-turquoise';
+
+                // Tamanho aleatório
+                const size = Math.random() * 6 + 3;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+
+                // Posição aleatória
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+
+                // Duração da animação aleatória
+                particle.style.animationDuration = (Math.random() * 4 + 4) + 's';
+                particle.style.animationDelay = Math.random() * 3 + 's';
+
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Criar partículas de fundo no footer
+        function createFooterParticles() {
+            const particlesContainer = document.getElementById('particles-footer');
+
+            const particleCount = 20;
+
+            // Partículas amarelas (igual ao hero)
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle-yellow';
+
+                // Tamanho aleatório
+                const size = Math.random() * 4 + 2;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+
+                // Posição aleatória
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+
+                // Duração da animação aleatória
+                particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+                particle.style.animationDelay = Math.random() * 2 + 's';
+
+                particlesContainer.appendChild(particle);
+            }
+
+            // Partículas turquesa (igual ao hero)
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'particle-turquoise';
