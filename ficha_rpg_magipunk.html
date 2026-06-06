@@ -1959,6 +1959,7 @@ function changeAttr(abbr, delta){
   document.getElementById('ab-'+abbr).textContent = `Bônus +${b} · 1d20+${b}`;
   renderPericias();
   updateSelInfo();
+  autosave();
 }
 
 // ── RENDER PERÍCIAS ───────────────────────────────────────
@@ -1995,6 +1996,7 @@ function handlePericiaClick(name){
   }
   renderPericias();
   updateSelInfo();
+  autosave();
 }
 
 function updateSelInfo(){
@@ -2077,6 +2079,7 @@ function addItem(cat, name='', qty=1){
     dano: {d100:0, d20:0, d10:0, d6:0, mod:0}, ptArmadura:0};
   inventory[cat].push(item);
   renderInvItem(cat, item);
+  autosave();
 }
 
 function danoFormula(dano){
@@ -2138,6 +2141,7 @@ function adjDano(cat, id, field, delta){
   const countEl = document.getElementById(`dano-${field}-count-${id}`);
   if(countEl) countEl.textContent = next;
   updateDano(cat, id, field, next);
+  autosave();
   // update header badge
   const li = document.getElementById(id);
   if(li){
@@ -2311,6 +2315,7 @@ function adjPtArmadura(id, delta){
     }
   }
   recalcArmorMax();
+  autosave();
 }
 
 function toggleInvItem(id){
@@ -2421,6 +2426,7 @@ function addItemHab(cat, itemId, tipo='ativas', data={}){
   if(el) el.classList.add('expanded');
   // switch to the right tab
   switchItemHabTab(itemId, tipo);
+  autosave();
 }
 
 function renderItemHab(cat, itemId, tipo, hab){
@@ -2500,6 +2506,7 @@ function removeItemHab(cat, itemId, tipo, hid){
     item.habilidades[tipo] = item.habilidades[tipo].filter(h => h.id !== hid);
   const el = document.getElementById(hid);
   if(el) el.remove();
+  autosave();
 }
 
 function rebuildItemHabs(cat, item){
@@ -2519,6 +2526,7 @@ function removeItem(cat, id){
   inventory[cat] = inventory[cat].filter(i => i.id !== id);
   const el = document.getElementById(id);
   if(el) el.remove();
+  autosave();
 }
 
 function escapeHtml(str){
@@ -2558,6 +2566,7 @@ function addHabilidade(tipo){
   const hab = {id, nome:'', classe:'', descricao:'', efeitos:'', dano:{d20:0,d10:0,d6:0,mod:0}};
   habilidadesData[tipo].push(hab);
   renderHabilidade(tipo, hab);
+  autosave();
 }
 
 function habDanoFormula(dano){
@@ -2609,6 +2618,7 @@ function adjHabDano(id, field, delta){
   // badge in header
   const li = document.getElementById(id);
   if(li){ const b=li.querySelector('.hab-dano-badge'); if(b) b.textContent=f||''; }
+  autosave();
 }
 
 function findHabTipo(id){
@@ -2634,6 +2644,7 @@ function removeHabilidade(id){
   habilidadesData[tipo] = habilidadesData[tipo].filter(h=>h.id!==id);
   const el = document.getElementById(id);
   if(el) el.remove();
+  autosave();
 }
 
 function toggleHabItem(id){
@@ -2963,6 +2974,7 @@ function setPortrait(dataUrl){
   img.style.display = 'block';
   document.getElementById('portrait-placeholder').style.display = 'none';
   document.getElementById('portrait-del').style.display = 'block';
+  autosave();
 }
 
 function removePortrait(){
@@ -2972,6 +2984,7 @@ function removePortrait(){
   img.style.display = 'none';
   document.getElementById('portrait-placeholder').style.display = 'flex';
   document.getElementById('portrait-del').style.display = 'none';
+  autosave();
 }
 
 // ── AUTOSAVE ──────────────────────────────────────────────
